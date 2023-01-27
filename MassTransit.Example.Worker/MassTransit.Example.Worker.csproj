@@ -3,6 +3,11 @@
   <ItemGroup>
     <ProjectReference Include="..\MassTransit.Example.Contracts\MassTransit.Example.Contracts.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.12" />
+  </ItemGroup>
   
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>

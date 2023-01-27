@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  database:
+    image: postgres
+    ports:
+      - 5432:5432
+
+  message-broker:
+    image: rabbitmq:3-management
+    ports:
+      - 5672:5672
+      - 15672:15672

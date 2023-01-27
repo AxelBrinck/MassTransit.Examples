@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/GettingStarted/GettingStarted.csproj",
+                "${workspaceFolder}/MassTransit.Example.Api/MassTransit.Example.Api.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/GettingStarted/GettingStarted.csproj",
+                "${workspaceFolder}/MassTransit.Example.Api/MassTransit.Example.Api.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/GettingStarted/GettingStarted.csproj"
+                "${workspaceFolder}/MassTransit.Example.Api/MassTransit.Example.Api.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
