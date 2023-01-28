@@ -1,6 +1,16 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using MassTransit;
+using MassTransit.Example.Worker;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddMassTransit(configure => {
+    configure.UsingRabbitMq((context, configuration) => {
+        configuration.ConfigureEndpoints(context);
+        configuration.ConcurrentMessageLimit = 1;
+    });
+    configure.AddConsumer<WorkConsumer>();
+    configure.SetKebabCaseEndpointNameFormatter();
+});
+
+var app = builder.Build();
 
 app.Run();
